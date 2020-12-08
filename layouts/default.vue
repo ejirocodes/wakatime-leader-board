@@ -93,4 +93,12 @@ p {
 .lang-wrapper {
   text-align: left;
 }
+@media screen and (max-width: 425px) {
+  .search {
+    padding: 1rem 1rem 0 !important;
+  }
+  .user-container {
+    padding: 0 0.5rem;
+  }
+}
 </style>

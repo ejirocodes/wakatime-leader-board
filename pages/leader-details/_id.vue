@@ -83,7 +83,7 @@ export default {
 
 <style scoped>
 .back {
-  padding: 2rem;
+  padding: 10px;
   cursor: pointer;
 }
 </style>
