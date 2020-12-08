@@ -7,6 +7,8 @@ The buildt-in JavaScript fetch API was used for API call in favour of axios or j
 This project is hosted on [Netlify](https://wakatime.netlify.app/)
 
 
+## Demo
+
 ## Build Setup
 
 ```bash
