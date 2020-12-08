@@ -1,4 +1,9 @@
-# africave-test
+# Project Alpha (Wakatime API)
+
+## Technologies Used
+This project was bootsrapped with Nuxtjs.
+Vue Chakra UI was used as against Vuetify or Bootstrap because none is as modular and light-weight as Charka UI
+The buildt-in JavaScript fetch API was used for API call in favour of axios or jQuery to reduce bundle size and improve performance
 
 ## Build Setup
 
