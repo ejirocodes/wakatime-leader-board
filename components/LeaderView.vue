@@ -41,12 +41,6 @@ export default {
       type: Array,
     },
   },
-  // computed: {
-  //   leadersSort() {
-  //     return this.leaders.sort((a, b) => b - a)
-  //   },
-  // },
-  mounted() {},
   methods: {
     handleUser(id) {
       this.$router.push(`leader-details/${id}`)
