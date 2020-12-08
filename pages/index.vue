@@ -6,7 +6,7 @@
           v-model="search"
           type="text"
           class="searchTerm"
-          placeholder="Search..."
+          placeholder="Search for developers..."
         />
         <button type="submit" class="searchButton">
           <img src="../assets/search.svg" alt="" />
@@ -51,12 +51,27 @@ export default {
   },
   methods: {
     async getLeaders() {
-      const res = await fetch('https://wakatime-wrapper.herokuapp.com/leaders')
-      const {data: users} = await res.json()
-      const sortUserDescend = users.sort(function(a, b){return b-a})
-      this.leaders = sortUserDescend
-      this.loading = false
+      try {
+        const res = await fetch('https://wakatime-wrapper.herokuapp.com/leaders')
+        const {data: users} = await res.json()
+        const sortUserDescend = users.sort(function(a, b){return b-a})
+        this.leaders = sortUserDescend
+        this.loading = false
+
+      } catch (error) {
+        this.loading = false
+        this.showToast()
+        console.error(error);
+      }
     },
+     showToast() {
+      this.$toast({
+        title: 'Error.',
+        description: "An error occured! Please check your internet connection and try again",
+        status: 'error',
+        duration: 5000
+      })
+    }
   },
 }
 </script>
@@ -83,7 +98,7 @@ export default {
   border: 3px solid #00b4cc;
   border-right: none;
   padding: 5px;
-  height: 20px;
+  padding-left: 14px;
   border-radius: 5px 0 0 5px;
   outline: none;
   color: #9dbfaf;
@@ -96,7 +111,7 @@ export default {
 
 .searchButton {
   width: 40px;
-  height: 36px;
+  height: 37px;
   border: 1px solid #00b4cc;
   background: #00b4cc;
   text-align: center;

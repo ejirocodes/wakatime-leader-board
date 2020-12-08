@@ -11,6 +11,9 @@ export default {
 
 <style>
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&display=swap');
+* {
+  box-sizing: border-box;
+}
 body {
   color: #fff i !important;
   font-family: 'JetBrains Mono', monospace;
