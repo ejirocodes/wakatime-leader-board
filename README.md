@@ -1,13 +1,22 @@
 # Project Alpha (Wakatime API)
 
 ## Technologies Used
-This project was bootsrapped with Nuxtjs.
-Vue Chakra UI was used as against Vuetify or Bootstrap because none is as modular and light-weight as Charka UI
-The buildt-in JavaScript fetch API was used for API call in favour of axios or jQuery to reduce bundle size and improve performance
-This project is hosted on [Netlify](https://wakatime.netlify.app/)
 
+### This project was bootsrapped with Nuxtjs.
+
+### Vue Chakra UI was used as against Vuetify or Bootstrap because none is as modular and light-weight as Charka UI
+
+### The buildt-in JavaScript fetch API was used for API call in favour of axios or jQuery to reduce bundle size and improve performance
+
+### This project is hosted on [Netlify](https://wakatime.netlify.app/)
 
 ## Demo
+
+![Demo](./assets/demo.png)
+
+## Challenges
+
+Wakatime was blocking me from accessing the API because of CORS, so I had to build a little backend wrapper that returns the Wakatime API with CORS enabled. You can find the [project here](https://github.com/ejirocodes/wakatime/blob/master/index.js)
 
 ## Build Setup
 
