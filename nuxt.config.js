@@ -19,12 +19,9 @@ export default {
       })
     }
   },
-  // router: {
-  //   routes: [
-  //      { path: '/leader-details/:id', com}
-  //     ]
-  // },
-
+  generate: {
+    fallback: true,
+  },
   // Global CSS (https://go.nuxtjs.dev/config-css)
   css: [],
 
