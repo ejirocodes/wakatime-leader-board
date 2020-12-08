@@ -49,7 +49,7 @@ export default {
       try {
         const res = await fetch('https://wakatime-wrapper.herokuapp.com/leaders')
         const {data: users} = await res.json()
-        const sortUserDescend = users.sort(function(a, b){return b-a})
+        const sortUserDescend = users.sort().reverse()
         this.leaders = sortUserDescend
         this.loading = false
 
