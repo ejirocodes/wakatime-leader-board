@@ -1,6 +1,7 @@
 <template>
   <section>
-    <header>
+    <img v-if="loading" src="../assets/loader.gif" alt="" class="loader" />
+    <header v-else>
       <div class="search">
         <input
           v-model="search"
@@ -9,17 +10,11 @@
           placeholder="Search for developers..."
         />
         <button type="submit" class="searchButton">
-          <img src="../assets/search.svg" alt="" />
+          <img src="../assets/search.svg" alt="search" class="search-icon" />
         </button>
       </div>
     </header>
     <div class="container">
-      <img
-        v-if="loading"
-        src="https://miro.medium.com/max/882/1*9EBHIOzhE1XfMYoKz1JcsQ.gif"
-        alt=""
-        class="loader"
-      />
       <LeaderView :leaders="filterLeaders" />
     </div>
   </section>
@@ -61,7 +56,6 @@ export default {
       } catch (error) {
         this.loading = false
         this.showToast()
-        console.error(error);
       }
     },
      showToast() {
@@ -80,21 +74,19 @@ export default {
 .container {
   color: #231e39 !important;
 }
-.loader {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-}
+
 .search {
   width: 100%;
   position: relative;
   display: flex;
   padding: 2rem 6rem 0;
 }
-
+.search-icon {
+  width: 15px;
+}
 .searchTerm {
   width: 100%;
+  height: 37px;
   border: 3px solid #00b4cc;
   border-right: none;
   padding: 5px;
@@ -102,7 +94,6 @@ export default {
   border-radius: 5px 0 0 5px;
   outline: none;
   color: #9dbfaf;
-  height: 100%;
 }
 
 .searchTerm:focus {
