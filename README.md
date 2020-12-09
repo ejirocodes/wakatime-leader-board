@@ -10,6 +10,8 @@
 
 ### This project is hosted on [Netlify](https://wakatime.netlify.app/)
 
+## Error Handling
+Errors were handles gracefully and displayed with Vue Chakra toast
 ## Demo
 
 ![Demo](./assets/demo.png)
